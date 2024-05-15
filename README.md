@@ -28,8 +28,9 @@ curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_
 
 网站—>选择刚刚创建的网站 配置—>HTTPS—>启用—>HTTP选项：访问HTTP自动跳转到HTTPS—>SSL 选项：选择已有证书—>Acme账户：选择刚刚创建的—>证书：选择刚刚创建的—>支持的协议：默认—>确定
 
-## **第五步** 创建数据库
+## **第五步** 创建数据库（使用远程数据库跳过此步骤）
 数据库—>创建数据库—>名称：nyanpass—>用户名：nyanpass—>确定
+密码下面备用
 
 ## **第六步**拉取Nyanpass
 ssh链接到vps 
