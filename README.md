@@ -41,7 +41,8 @@ cd /opt/1panel/apps/openresty/openresty/www/sites/nyanpass
 ```
 bash <(curl -fLSs https://api.candypath.eu.org/download/download.sh) https://api.candypath.eu.org rel_backend_linux_amd64
 ```
-面板进入王致和目录创建两个文件
+面板进入网站目录创建两个文件
+
 网站——网站目录——创建——文件——名称：config.yml
 
 内容填
