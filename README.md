@@ -1,5 +1,6 @@
 # 这是一篇Nyanpass转发面板使用1Panel搭建的教程
 移动云购买认准 丢总 https://t.me/DiuDiu777
+
 国内外服务器合租频道 https://t.me/serversgo
 
 ## **第一步** 安装1Panel  
