@@ -47,7 +47,7 @@ bash <(curl -fLSs https://api.candypath.eu.org/download/download.sh) https://api
 
 网站—>网站目录—>创建—>文件—>名称：config.yml
 
-内容填  **注意密码以及key填写实际内容**
+内容填  **注意数据库密码以及key填写实际内容**
 ```
 # 数据库 注意修改密码为数据库密码 以及 填写正确的授权码key
 
