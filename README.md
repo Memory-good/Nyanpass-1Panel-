@@ -43,7 +43,7 @@ bash <(curl -fLSs https://api.candypath.eu.org/download/download.sh) https://api
 ```
 面板进入网站目录创建两个文件
 
-网站——>网站目录——>创建——>文件——>名称：config.yml
+网站—>网站目录—>创建—>文件—>名称：config.yml
 
 内容填
 ```
@@ -73,7 +73,7 @@ key: xxxxxx
 disable-gzip: false
 ```
 
-创建——>文件——>名称：docker-compose.yaml
+创建—>文件—>名称：docker-compose.yaml
 
 内容填
 ```
