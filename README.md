@@ -13,20 +13,20 @@ curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_
 
 然后进入搭建好的1Panel控制面板
 ## **第二步** 安装OpenResty 和Mysql（如果安装Mysql建议内存2G起步）
-应用商店—>点击安装安装OpenResty —>默认设置 确认
+1.应用商店—>点击安装安装OpenResty —>默认设置 确认
 
-安装Mysql—>版本：5.7.44—>端口外部访问勾选—>确认 （如果使用远程数据库 可不装）
+2.安装Mysql—>版本：5.7.44—>端口外部访问勾选—>确认 （如果使用远程数据库 可不装）
 
 ## **第三步** 创建网站
 网站—>创建网站—>**顶部选择反向代理类型**—>域名处填写你的域名—>代号： nyanpass（重要）—>代理地址： ```127.0.0.1:18888```
 —>确定
 
 ## **第四步** 设置证书 
-网站—>证书—>Acme账户—>创建账户—>随便输入一个邮箱—>账号类型：Lets—>密钥算法：EC 256—>确定
+1.网站—>证书—>Acme账户—>创建账户—>随便输入一个邮箱—>账号类型：Lets—>密钥算法：EC 256—>确定
 
-申请证书—>从网站中获取选择你的域名—>Acme账户与算法选择刚刚创建的—>验证方式选择HTTP—>自动续签勾选—>确定
+2.申请证书—>从网站中获取选择你的域名—>Acme账户与算法选择刚刚创建的—>验证方式选择HTTP—>自动续签勾选—>确定
 
-网站—>选择刚刚创建的网站 配置—>HTTPS—>启用—>HTTP选项：访问HTTP自动跳转到HTTPS—>SSL 选项：选择已有证书—>Acme账户：选择刚刚创建的—>证书：选择刚刚创建的—>支持的协议：默认—>确定
+3.网站—>选择刚刚创建的网站 配置—>HTTPS—>启用—>HTTP选项：访问HTTP自动跳转到HTTPS—>SSL 选项：选择已有证书—>Acme账户：选择刚刚创建的—>证书：选择刚刚创建的—>支持的协议：默认—>确定
 
 ## **第五步** 创建数据库（使用远程数据库跳过此步骤）
 数据库—>创建数据库—>名称：nyanpass—>用户名：nyanpass—>确定
@@ -34,18 +34,18 @@ curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_
 密码下方配置文件备用
 
 ## **第六步**拉取Nyanpass
-ssh链接到vps 
+1.ssh链接到vps 
 ```
 cd /opt/1panel/apps/openresty/openresty/www/sites/nyanpass
 ```
 
-然后输入命令拉取最新版Nyanpass
+2.输入命令拉取最新版Nyanpass
 ```
 bash <(curl -fLSs https://api.candypath.eu.org/download/download.sh) https://api.candypath.eu.org rel_backend_linux_amd64
 ```
 面板进入网站目录创建两个文件
 
-网站—>网站目录—>创建—>文件—>名称：config.yml
+3.网站—>网站目录—>创建—>文件—>名称：config.yml
 
 内容填  **注意数据库密码以及key填写实际内容**
 ```
@@ -75,7 +75,7 @@ key: xxxxxx
 disable-gzip: false
 ```
 
-创建—>文件—>名称：docker-compose.yaml
+4.创建—>文件—>名称：docker-compose.yaml
 
 内容填
 ```
@@ -103,11 +103,11 @@ services:
 ```
 
 ## **第七步**启动Nyanpass
-ssh链接到vps 
+1.ssh链接到vps 
 ```
 cd /opt/1panel/apps/openresty/openresty/www/sites/nyanpass
 ```
-第一次运行初始化数据库
+2.第一次运行初始化数据库
 ```
 MIGRATE=1 ADMIN="admin" ./rel_backend
 ```
@@ -115,28 +115,28 @@ MIGRATE=1 ADMIN="admin" ./rel_backend
 
 如果无误，运行此命令将输出管理员的帐号与密码。
 
-启动
+3.启动
 ```
 docker compose up -d
 ```
 至此 已经可以正常访问面板了
 
 ## **版本更新**
-ssh链接到vps 
+1.ssh链接到vps 
 ```
 cd /opt/1panel/apps/openresty/openresty/www/sites/nyanpass
 ```
-停止面板
+2.停止面板
 ```
 docker compose down -t1
 ```
-删除老版本下载新版本
+3.删除老版本下载新版本
 ```
 rm -rf public
 rm -f rel_backend
 bash <(curl -fLSs https://api.candypath.eu.org/download/download.sh) https://api.candypath.eu.org rel_backend_linux_amd64
 ```
-启动
+4.启动
 ```
 MIGRATE=1 ./rel_backend
 docker compose up -d
