@@ -30,7 +30,8 @@ curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_
 
 ## **第五步** 创建数据库（使用远程数据库跳过此步骤）
 数据库—>创建数据库—>名称：nyanpass—>用户名：nyanpass—>确定
-密码下面备用
+
+密码下方配置文件备用
 
 ## **第六步**拉取Nyanpass
 ssh链接到vps 
