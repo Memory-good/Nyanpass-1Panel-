@@ -4,7 +4,7 @@
 国内外服务器合租频道 https://t.me/serversgo
 
 ## **第一步** 安装1Panel  
-以下是debian 安装命令  
+`rgb(9, 105, 218)`以下是debian 安装命令  
 其余系统自行官网查找
 ```
 curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && bash quick_start.sh
