@@ -36,8 +36,6 @@ ssh链接到vps
 ```
 cd /opt/1panel/apps/openresty/openresty/www/sites/nyanpass
 ```
-cd到你的网站文件夹中
-不知道的可以去网站中的目录查看
 
 然后输入命令拉取最新版Nyanpass
 ```
