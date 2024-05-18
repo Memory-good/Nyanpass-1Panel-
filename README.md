@@ -36,7 +36,7 @@ curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_
 ## **第六步**拉取Nyanpass
 >1.ssh链接到vps 
 ```
-cd /opt/1panel/apps/openresty/openresty/www/sites/nyanpass
+cd /opt/1panel/apps/openresty/openresty/www/sites/nyanpass/index
 ```
 
 >2.输入命令拉取最新版Nyanpass
@@ -45,7 +45,7 @@ bash <(curl -fLSs https://api.candypath.eu.org/download/download.sh) https://api
 ```
 面板进入网站目录创建两个文件
 
->3.网站—>网站目录—>创建—>文件—>名称：config.yml
+>3.网站—>网站目录—>进入index文件夹—>创建—>文件—>名称：config.yml
 
 内容填  **注意数据库密码以及key填写实际内容**
 ```
@@ -75,7 +75,7 @@ key: xxxxxx
 disable-gzip: false
 ```
 
->4.创建—>文件—>名称：docker-compose.yaml
+>4.index文件夹—>创建—>文件—>名称：docker-compose.yaml
 
 内容填
 ```
@@ -95,9 +95,9 @@ services:
 
     volumes:
 
-      - .:/opt/1panel/apps/openresty/openresty/www/sites/nyanpass
+      - .:/opt/1panel/apps/openresty/openresty/www/sites/nyanpass/index
 
-    working_dir: /opt/1panel/apps/openresty/openresty/www/sites/nyanpass
+    working_dir: /opt/1panel/apps/openresty/openresty/www/sites/nyanpass/index
 
     command: ./rel_backend
 ```
@@ -105,7 +105,7 @@ services:
 ## **第七步**启动Nyanpass
 >1.ssh链接到vps 
 ```
-cd /opt/1panel/apps/openresty/openresty/www/sites/nyanpass
+cd /opt/1panel/apps/openresty/openresty/www/sites/nyanpass/index
 ```
 >2.第一次运行初始化数据库
 ```
@@ -124,7 +124,7 @@ docker compose up -d
 ## **版本更新**
 >1.ssh链接到vps 
 ```
-cd /opt/1panel/apps/openresty/openresty/www/sites/nyanpass
+cd /opt/1panel/apps/openresty/openresty/www/sites/nyanpass/index
 ```
 >2.停止面板
 ```
