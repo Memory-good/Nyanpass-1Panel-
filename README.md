@@ -49,7 +49,7 @@ bash <(curl -fLSs https://api.candypath.eu.org/download/download.sh) https://api
 
 内容填  **注意数据库密码以及key填写实际内容**
 ```
-# 数据库 注意修改密码为数据库密码 以及 填写正确的授权码key
+# 数据库 注意修改密码为数据库密码 以及 填写正确的授权码key  如果启动失败 则把127.0.0.1改成机器的公网ip
 
 database-path: "mysql://nyanpass:密码@tcp(127.0.0.1:3306)/nyanpass?charset=utf8mb4&parseTime=true"
 
