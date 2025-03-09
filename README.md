@@ -134,7 +134,7 @@ docker compose down -t1
 ```
 rm -rf public
 rm -f rel_backend
-bash <(curl -fLSs https://api.candypath.eu.org/download/download.sh) https://api.candypath.eu.org rel_backend_linux_amd64
+bash <(curl -fLSs https://dl.nyafw.com/download/download.sh) https://dl.nyafw.com rel_backend_linux_amd64
 ```
 >4.启动
 ```
