@@ -41,7 +41,7 @@ cd /opt/1panel/apps/openresty/openresty/www/sites/nyanpass/index
 
 >2.输入命令拉取最新版Nyanpass
 ```
-bash <(curl -fLSs https://api.candypath.eu.org/download/download.sh) https://api.candypath.eu.org rel_backend_linux_amd64
+bash <(curl -fLSs https://dl.nyafw.com/download/download.sh) https://dl.nyafw.com rel_backend_linux_amd64
 ```
 面板进入网站目录创建两个文件
 
