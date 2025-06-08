@@ -100,6 +100,11 @@ services:
     working_dir: /opt/1panel/apps/openresty/openresty/www/sites/nyanpass/index
 
     command: ./rel_backend
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "3"
 ```
 
 ## **第七步**启动Nyanpass
@@ -119,6 +124,10 @@ MIGRATE=1 ADMIN="admin" ./rel_backend
 ```
 docker compose up -d
 ```
+## **第八步**设置主目录和反代
+>1.网站—>刚才所创建的网站—>配置—>网站目录—>运行目录—>选择/public—>保存并重载
+>2.反向代理—>创建反向代理—>名称随意填写—>前端请求路径填写：api —>后端代理地址填：127.0.0.1:18888—>确认
+
 至此 已经可以正常访问面板了
 
 ## **版本更新**
